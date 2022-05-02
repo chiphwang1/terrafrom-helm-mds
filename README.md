@@ -22,7 +22,7 @@ If you don't have the required permissions and quota, contact your tenancy admin
 
 ## Deploy Using Oracle Resource Manager
 
-1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/oracle-devrel/terraform-oci-arch-oke-mds/releases/latest/download/terraform-oci-arch-oke-mds-stack-latest.zip)
+1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/chiphwang1/terrafrom-helm-mds/archive/refs/tags/v1.zip)
 
     If you aren't already signed in, when prompted, enter the tenancy and user credentials.
 
