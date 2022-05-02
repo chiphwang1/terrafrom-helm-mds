@@ -5,8 +5,14 @@ provider "helm" {
 }
 
 
+resource "time_sleep" "wait_1min" {
+  depends_on = [
+  local_file.KubeConfigFile
+  ]
+  create_duration = "60s"
+}
 
-resource "helm_release" "nginx_ingress" {
+resource "helm_release" "magento" {
   depends_on = [time_sleep.wait_1min, module.mds-instance]
   name       = "magento"
 
@@ -20,7 +26,7 @@ resource "helm_release" "nginx_ingress" {
 
   set {
     name = "externalDatabase.host"
-    value = output.mds_instance_ip
+    value = module.mds-instance.mysql_db_system.ip_address
   }
 
   set {
@@ -28,5 +34,10 @@ resource "helm_release" "nginx_ingress" {
     value = var.admin_password
   }
 
+
+set {
+    name = "externalDatabase.user"
+    value = variable.admin_username
+  }
 
 }
