@@ -37,7 +37,7 @@ resource "helm_release" "magento" {
 
 set {
     name = "externalDatabase.user"
-    value = variable.admin_username
+    value = var.admin_username
   }
 
 }
