@@ -344,7 +344,7 @@ resource "oci_core_subnet" "OKE_MDS_lb_subnet" {
   compartment_id = var.compartment_ocid
   vcn_id         = oci_core_vcn.OKE_MDS_vcn.id
   display_name   = "OKE_MDS_lb_subnet"
-  prohibit_public_ip_on_vnic = true
+  prohibit_public_ip_on_vnic = false
   security_list_ids = [oci_core_vcn.OKE_MDS_vcn.default_security_list_id]
   route_table_id    = oci_core_route_table.OKE_MDS_rt_via_igw.id
   defined_tags   = { "${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
