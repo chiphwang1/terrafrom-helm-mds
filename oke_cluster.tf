@@ -20,7 +20,7 @@ module "oci-oke" {
   services_cidr                     = var.cluster_options_kubernetes_network_config_services_cidr
   use_existing_vcn                  = true
   vcn_id                            = oci_core_vcn.OKE_MDS_vcn.id
-  is_api_endpoint_subnet_public     = true
+  is_api_endpoint_subnet_public     = false
   api_endpoint_subnet_id            = oci_core_subnet.OKE_MDS_api_endpoint_subnet.id
   is_lb_subnet_public               = false
   lb_subnet_id                      = oci_core_subnet.OKE_MDS_lb_subnet.id
