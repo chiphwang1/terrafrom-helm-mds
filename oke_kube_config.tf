@@ -3,5 +3,5 @@
 
 resource "local_file" "KubeConfigFile" {
   content  = module.oci-oke.KubeConfig
-  filename = "${path.module}/oke_cluster_kubeconfig"
+  filename = "/tmp/kubeconfig"
 }
